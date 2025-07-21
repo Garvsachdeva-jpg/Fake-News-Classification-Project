@@ -17,8 +17,19 @@ nltk.download('wordnet', quiet=True)
 
 # === Pattern detection for code ===
 def looks_like_code(text):
-    patterns = [r";", r"\bimport\b", r"\bdef\b|\bclass\b", r"[{}]", r"<[^>]+>", r"#include\b", r"\bpublic\b|\bstatic\b"]
-    return any(re.search(p, text) for p in patterns)
+    # Only flag as code if multiple code-like patterns exist
+    patterns = [
+        r"\bimport\b", r"\bdef\b", r"\bclass\b", r"[{}]",
+        r"<[^>]+>", r"#include\b", r"\bpublic\b", r"\bstatic\b",
+        r"\bfunction\b", r"console\.log", r"\bend\b"
+    ]
+    code_like_matches = sum(1 for p in patterns if re.search(p, text))
+    
+    # If only a semicolon is found, but it's natural language, ignore
+    semicolon_count = text.count(";")
+    
+    # Require at least 2 code-like matches or 1 strong pattern (like `import`) AND no full sentences
+    return code_like_matches >= 2 or (semicolon_count >= 2 and code_like_matches >= 1)
 
 # === Load Models ===
 try:
