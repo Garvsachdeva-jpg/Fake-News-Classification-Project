@@ -15,3 +15,11 @@
 ├── model_accuracy.pkl          # Saved model accuracy
 ├── classification_report.txt   # Precision/recall/F1 metrics
 ├── classification_logs.csv     # Logs of all predictions (auto-generated)
+📌 Future Improvements
+🌐 Browser extension for real-time detection
+
+📱 React Native mobile version
+
+🧑‍💻 Admin dashboard to bulk review flagged headlines
+
+☁️ Migrate logging to a cloud database (e.g., Firebase or MongoDB)
