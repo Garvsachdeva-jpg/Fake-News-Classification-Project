@@ -5,6 +5,8 @@ import pandas as pd
 import re
 import nltk
 import os
+import nltk
+nltk.data.path.append("nltk_data")
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
