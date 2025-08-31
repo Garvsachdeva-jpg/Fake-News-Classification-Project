@@ -6,16 +6,16 @@ import re
 import nltk
 import os
 import nltk
-nltk.data.path.append("nltk_data")
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from datetime import datetime
 
 # === Download NLTK resources ===
-nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
-nltk.download('wordnet', quiet=True)
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt_tab')
 
 # === Pattern detection for code ===
 def looks_like_code(text):
