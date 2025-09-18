@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from datetime import datetime
+import streamlit.components.v1 as components
 
 # === Download NLTK resources ===
 nltk.download('punkt')
