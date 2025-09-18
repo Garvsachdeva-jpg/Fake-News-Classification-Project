@@ -132,7 +132,7 @@ if st.button("🚨 Check Now"):
         st.warning("⚠️ Please enter a news snippet for analysis.")
 
 # === Sidebar: Interactive Model Info ===
-t.sidebar.title("🧠 AI Model Info")
+st.sidebar.title("🧠 AI Model Info")
 
 with st.sidebar.expander("🔍 How It Works"):
     st.markdown("- Uses **TF-IDF vectorizer** for feature extraction.\n"
