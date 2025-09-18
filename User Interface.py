@@ -173,7 +173,7 @@ with st.sidebar.expander("A game really!"):
             
             html_content = file.read()
 # Display the HTML content
-             components.html(html_content, height=600, width=1200)
+            components.html(html_content, height=600, width=1200)
     
     except FileNotFoundError:
         
