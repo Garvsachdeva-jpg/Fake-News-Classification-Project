@@ -131,7 +131,7 @@ if st.button("🚨 Check Now"):
         st.warning("⚠️ Please enter a news snippet for analysis.")
 
 # === Sidebar: Interactive Model Info ===
-st.sidebar.title("🧠 AI Model Info")
+t.sidebar.title("🧠 AI Model Info")
 
 with st.sidebar.expander("🔍 How It Works"):
     st.markdown("- Uses **TF-IDF vectorizer** for feature extraction.\n"
@@ -158,6 +158,29 @@ with st.sidebar.expander("🚀 Future Scope"):
     - 📱 Mobile app version using **React Native**.
     - 📈 Admin dashboard to view flagged news in bulk.
     """)
+
+
+# --- Main Content Area (HTML) ---
+with st.sidebar.expander("A game really!"):
+    html_file_path = "index.html"
+    try:
+
+
+    # Read the content of the HTML file
+        with open(html_file_path, 'r', encoding='utf-8') as file:
+            
+            
+            html_content = file.read()
+# Display the HTML content
+            components.html(html_content, height=400, width=800)
+    
+    except FileNotFoundError:
+        
+
+        st.error(f"Error: The file '{html_file_path}' was not found. "
+        "Please make sure it's in the same directory as this script.")
+
+
 
 # === Footer ===
 st.markdown("---")
