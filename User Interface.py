@@ -163,7 +163,7 @@ with st.sidebar.expander("🚀 Future Scope"):
 
 # --- Main Content Area (HTML) ---
 with st.sidebar.expander("A game really!"):
-    html_file_path = "index.html"
+    html_file_path = "!DOCTYPE.html"
     try:
 
 
